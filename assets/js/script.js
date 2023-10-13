@@ -39,5 +39,11 @@ saveBTN.on("click", function () {
   localStorage.setItem(time, text);
 });
 
+//saves the user inputs and it'll save data even if user refreshes data will stay
+$(".description").each(function () {
+  timeBlockId = $(this).parent().attr("id");
+  eventShow = localStorage.getItem(timeBlockId);
+  $(this).val(eventShow);
+});
 
 
