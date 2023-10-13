@@ -30,4 +30,14 @@ timeBlock.each(function () {
   }
 })
 
+//adds click listener for saveBTN
+saveBTN.on("click", function () {
+  //gets values of descruption and time using JQUERY
+  var text = $(this).siblings("textarea").val();
+  var time = $(this).parent().attr("id");
+  //saves text in local storage
+  localStorage.setItem(time, text);
+});
+
+
 
